@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>adachi — portfolio</title>
+<meta name="description" content="adachi's personal portfolio and cozy corner of the web">
+<meta name="theme-color" content="#f4f8fb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:#334e68;
+  background:#f4f8fb;
+  min-height:100vh;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(49,130,206,.2);color:#102a43}
+:focus-visible{outline:2px solid #3182ce;outline-offset:3px}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f4f8fb}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(244,248,251,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(49,130,206,.15);
+  padding:0 2rem;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:#102a43;
+  font-weight:600;font-size:1.1rem;letter-spacing:.02em;
+}
+nav{display:flex;gap:2rem;align-items:center}
+nav a{
+  color:#627d98;text-decoration:none;font-size:.85rem;
+  font-weight:500;letter-spacing:.03em;
+  transition:color .2s;
+}
+nav a:hover{color:#3182ce}
+
+.hero{
+  min-height:100vh;
+  padding-top:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-inner{
+  display:flex;
+  align-items:center;
+  gap:clamp(2rem,5vw,5rem);
+  padding:clamp(2rem,4vw,4rem);
+  max-width:1100px;
+  width:100%;
+}
+.hero-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.hero-content h1{
+  font-size:clamp(2.5rem,6vw,4rem);
+  font-weight:700;
+  color:#102a43;
+  margin-bottom:1rem;
+  letter-spacing:-.02em;
+  line-height:1.1;
+}
+.hero-content .tagline{
+  font-size:1.1rem;
+  color:#627d98;
+  margin-bottom:2rem;
+  line-height:1.7;
+  max-width:600px;
+}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid #3182ce;color:#102a43;
+  text-decoration:none;
+  background:#ffffff;
+  padding:12px 28px;border-radius:6px;
+  font-weight:500;font-size:.9rem;
+  letter-spacing:.03em;
+  transition:all .2s;
+  box-shadow:0 2px 4px rgba(0,0,0,.02);
+}
+.btn:hover{background:rgba(49,130,206,.1)}
+.btn.primary{
+  background:#3182ce;color:#ffffff;
+  border-color:#3182ce;
+}
+.btn.primary:hover{background:#2b6cb0}
+
+section{
+  padding:clamp(3rem,8vw,6rem) clamp(2rem,5vw,4rem);
+  max-width:1000px;
+  margin:0 auto;
+}
+section h2{
+  font-size:1.8rem;font-weight:600;color:#102a43;
+  margin-bottom:.5rem;letter-spacing:-.01em;
+}
+section .subtitle{
+  color:#627d98;font-size:.9rem;margin-bottom:2rem;
+  letter-spacing:.02em;
+}
+.divider{
+  border:none;border-top:1px solid rgba(49,130,206,.15);
+  margin:0 clamp(2rem,5vw,4rem);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:#ffffff;
+  border:1px solid rgba(49,130,206,.15);
+  border-radius:8px;
+  padding:24px;
+  box-shadow:0 4px 12px rgba(0,0,0,.03);
+}
+.card h3{
+  color:#102a43;
+  font-size:1.1rem;
+  margin-bottom:.75rem;
+  font-weight:600;
+}
+.card p{
+  color:#627d98;
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+footer{
+  text-align:center;padding:3rem 2rem;
+  color:#627d98;font-size:.85rem;
+  border-top:1px solid rgba(49,130,206,.15);
+}
+footer p{margin:.5rem 0}
+footer a{color:#3182ce;text-decoration:none;transition:color .2s}
+footer a:hover{color:#2b6cb0}
+
+@media(max-width:768px){
+  .hero-inner{flex-direction:column;text-align:center}
+  nav{gap:1rem}
+  nav a{font-size:.8rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#home" class="logo">adachi :3</a>
+  <nav>
+    <a href="#work">my work :3</a>
+    <a href="#likes">the things i like :3</a>
+    <a href="#distro">my linux distro (kyonlinux) :3</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>hi i am adachi</h1>
+      <p class="tagline">welcome to my little corner</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#work">explore my work</a>
+        <a class="btn" href="https://github.com/adachiPPP" target="_blank">github profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="work">
+  <h2>my work :3</h2>
+  <p class="subtitle">some cool projects i made :3</p>
+  <div class="grid">
+    <div class="card">
+      <h3>kyon linux</h3>
+      <p>an independent arch based distribution built with a custom package manager named nya designed for accessibility and clean aesthetics</p>
+    </div>
+    <div class="card">
+      <h3>smol linux</h3>
+      <p>a minimal custom c init live environment tested and booted seamlessly inside qemu</p>
+    </div>
+    <div class="card">
+      <h3>cat clicker</h3>
+      <p>a fun desktop clicker application written in rust using egui and packaged for arch linux</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="likes">
+  <h2>the things i like :3</h2>
+  <p class="subtitle">stuff that makes me happy :3</p>
+  <div class="grid">
+    <div class="card">
+      <h3>linux</h3>
+      <p>honestly, i love linux. the environment it gives is really easy to use from a developer's perspective and the customisability... im more of a DIY person so i LOOOOVE linux.</p>
+    </div>
+    <div class="card">
+      <h3>programming</h3>
+      <p>coding relieves me, i spend hours on developing my package manager and distro. honestly? its like a game to me</p>
+    </div>
+    <div class="card">
+      <h3>music</h3>
+      <p>i usually listen to a lot of kinds of music such as jpop, vocaloid, breakcore and a ton more</p>
+    </div>
+    <div class="card">
+      <h3>books</h3>
+      <p>im not a fan of boring books BUT i love books that take me deep in its roots</p>
+    </div>
+    <div class="card">
+      <h3>sleeping</h3>
+      <p>yes. sleeping.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="distro">
+  <h2>my linux distro (kyonlinux) & its features :3</h2>
+  <p class="subtitle">all about my custom operating system project</p>
+  <div class="card">
+    <h3>kyon linux overview</h3>
+    <p>kyon linux is an independent arch based custom distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
+    <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+  </div>
+  <div class="card">
+  <h3>nya package manager</h3>
+    <p>nya package manager is here to completely replace yay and pacman from the root. pacman was never complete from my perspective, and needing an aur helper just to get packages from aur seemed pointless... so i just made my own! nya comes with a TON of features and its still lighter than pacman :3</p>
+    <p>nya supports pacman repos, arch user repository, its own recipe thingy called nya-hosts, nix and last but not least flatpak. its job is to combine everything in one package manager and its pretty easy to use too!</p>
+    <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>made by adachi with love :3</p>
+  <p><a href="https://github.com/adachiPPP" target="_blank">github</a></p>
+</footer>
+
+</body>
+</html>
