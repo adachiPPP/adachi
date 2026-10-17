@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>adachi — portfolio</title>
 <meta name="description" content="adachi's personal portfolio and cozy corner of the web">
-<meta name="theme-color" content="#f4f8fb">
+<meta name="theme-color" content="#0c1a2a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,23 +14,23 @@
 html{scroll-behavior:smooth}
 body{
   font-family:'Inter',system-ui,-apple-system,sans-serif;
-  color:#334e68;
-  background:#f4f8fb;
+  color:#c8d6e5;
+  background:#0c1a2a;
   min-height:100vh;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
-::selection{background:rgba(49,130,206,.2);color:#102a43}
-:focus-visible{outline:2px solid #3182ce;outline-offset:3px}
+::selection{background:rgba(74,168,216,.3);color:#fff}
+:focus-visible{outline:2px solid #4aa8d8;outline-offset:3px}
 ::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:#f4f8fb}
-::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+::-webkit-scrollbar-track{background:#0c1a2a}
+::-webkit-scrollbar-thumb{background:#1e3a50;border-radius:3px}
 
 header{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(244,248,251,.95);
+  background:rgba(12,26,42,.95);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(49,130,206,.15);
+  border-bottom:1px solid rgba(74,168,216,.15);
   padding:0 2rem;
   height:64px;
   display:flex;
@@ -39,16 +39,16 @@ header{
 }
 .logo{
   display:flex;align-items:center;gap:12px;
-  text-decoration:none;color:#102a43;
+  text-decoration:none;color:#e8f4f8;
   font-weight:600;font-size:1.1rem;letter-spacing:.02em;
 }
 nav{display:flex;gap:2rem;align-items:center}
 nav a{
-  color:#627d98;text-decoration:none;font-size:.85rem;
+  color:#8faabe;text-decoration:none;font-size:.85rem;
   font-weight:500;letter-spacing:.03em;
   transition:color .2s;
 }
-nav a:hover{color:#3182ce}
+nav a:hover{color:#4aa8d8}
 
 .hero{
   min-height:100vh;
@@ -74,14 +74,14 @@ nav a:hover{color:#3182ce}
 .hero-content h1{
   font-size:clamp(2.5rem,6vw,4rem);
   font-weight:700;
-  color:#102a43;
+  color:#e8f4f8;
   margin-bottom:1rem;
   letter-spacing:-.02em;
   line-height:1.1;
 }
 .hero-content .tagline{
   font-size:1.1rem;
-  color:#627d98;
+  color:#8faabe;
   margin-bottom:2rem;
   line-height:1.7;
   max-width:600px;
@@ -89,21 +89,20 @@ nav a:hover{color:#3182ce}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
-  border:1px solid #3182ce;color:#102a43;
+  border:1px solid #4aa8d8;color:#e8f4f8;
   text-decoration:none;
-  background:#ffffff;
+  background:transparent;
   padding:12px 28px;border-radius:6px;
   font-weight:500;font-size:.9rem;
   letter-spacing:.03em;
   transition:all .2s;
-  box-shadow:0 2px 4px rgba(0,0,0,.02);
 }
-.btn:hover{background:rgba(49,130,206,.1)}
+.btn:hover{background:rgba(74,168,216,.15)}
 .btn.primary{
-  background:#3182ce;color:#ffffff;
-  border-color:#3182ce;
+  background:#4aa8d8;color:#0c1a2a;
+  border-color:#4aa8d8;
 }
-.btn.primary:hover{background:#2b6cb0}
+.btn.primary:hover{background:#3a98c8}
 
 section{
   padding:clamp(3rem,8vw,6rem) clamp(2rem,5vw,4rem);
@@ -111,15 +110,15 @@ section{
   margin:0 auto;
 }
 section h2{
-  font-size:1.8rem;font-weight:600;color:#102a43;
+  font-size:1.8rem;font-weight:600;color:#e8f4f8;
   margin-bottom:.5rem;letter-spacing:-.01em;
 }
 section .subtitle{
-  color:#627d98;font-size:.9rem;margin-bottom:2rem;
+  color:#5a7a8e;font-size:.9rem;margin-bottom:2rem;
   letter-spacing:.02em;
 }
 .divider{
-  border:none;border-top:1px solid rgba(49,130,206,.15);
+  border:none;border-top:1px solid rgba(74,168,216,.12);
   margin:0 clamp(2rem,5vw,4rem);
 }
 
@@ -129,32 +128,41 @@ section .subtitle{
   gap:1.5rem;
 }
 .card{
-  background:#ffffff;
-  border:1px solid rgba(49,130,206,.15);
+  background:rgba(15,36,56,.4);
+  border:1px solid rgba(74,168,216,.1);
   border-radius:8px;
   padding:24px;
-  box-shadow:0 4px 12px rgba(0,0,0,.03);
 }
 .card h3{
-  color:#102a43;
+  color:#e8f4f8;
   font-size:1.1rem;
   margin-bottom:.75rem;
   font-weight:600;
 }
 .card p{
-  color:#627d98;
+  color:#8faabe;
   font-size:.9rem;
   line-height:1.6;
+}
+.card p + p {
+  margin-top: 1rem;
+}
+.card a {
+  color: #4aa8d8;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
 }
 
 footer{
   text-align:center;padding:3rem 2rem;
-  color:#627d98;font-size:.85rem;
-  border-top:1px solid rgba(49,130,206,.15);
+  color:#3a5a6e;font-size:.85rem;
+  border-top:1px solid rgba(74,168,216,.1);
 }
 footer p{margin:.5rem 0}
-footer a{color:#3182ce;text-decoration:none;transition:color .2s}
-footer a:hover{color:#2b6cb0}
+footer a{color:#5a7a8e;text-decoration:none;transition:color .2s}
+footer a:hover{color:#4aa8d8}
 
 @media(max-width:768px){
   .hero-inner{flex-direction:column;text-align:center}
@@ -246,16 +254,18 @@ footer a:hover{color:#2b6cb0}
 <section id="distro">
   <h2>my linux distro (kyonlinux) & its features :3</h2>
   <p class="subtitle">all about my custom operating system project</p>
-  <div class="card">
-    <h3>kyon linux overview</h3>
-    <p>kyon linux is an independent arch based custom distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
-    <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
-  </div>
-  <div class="card">
-  <h3>nya package manager</h3>
-    <p>nya package manager is here to completely replace yay and pacman from the root. pacman was never complete from my perspective, and needing an aur helper just to get packages from aur seemed pointless... so i just made my own! nya comes with a TON of features and its still lighter than pacman :3</p>
-    <p>nya supports pacman repos, arch user repository, its own recipe thingy called nya-hosts, nix and last but not least flatpak. its job is to combine everything in one package manager and its pretty easy to use too!</p>
-    <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+  <div class="grid">
+    <div class="card">
+      <h3>kyon linux overview</h3>
+      <p>kyon linux is an independent arch based custom distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
+      <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+    </div>
+    <div class="card">
+      <h3>nya package manager</h3>
+      <p>nya package manager is here to completely replace yay and pacman from the root. pacman was never complete from my perspective, and needing an aur helper just to get packages from aur seemed pointless... so i just made my own! nya comes with a TON of features and its still lighter than pacman :3</p>
+      <p>nya supports pacman repos, arch user repository, its own recipe thingy called nya-hosts, nix and last but not least flatpak. its job is to combine everything in one package manager and its pretty easy to use too!</p>
+      <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+    </div>
   </div>
 </section>
 
