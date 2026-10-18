@@ -65,6 +65,20 @@ nav a:hover{color:#4aa8d8}
   max-width:1100px;
   width:100%;
 }
+.hero-avatar{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-avatar img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(74,168,216,.3);
+  box-shadow:0 8px 32px rgba(0,0,0,.3);
+}
 .hero-content{
   flex:1;
   display:flex;
@@ -166,6 +180,7 @@ footer a:hover{color:#4aa8d8}
 
 @media(max-width:768px){
   .hero-inner{flex-direction:column;text-align:center}
+  .hero-avatar img{width:160px;height:160px}
   nav{gap:1rem}
   nav a{font-size:.8rem}
 }
@@ -188,6 +203,9 @@ footer a:hover{color:#4aa8d8}
 
 <section class="hero" id="home">
   <div class="hero-inner">
+    <div class="hero-avatar">
+      <img src="./pfp.jpg" alt="adachi">
+    </div>
     <div class="hero-content">
       <h1>hi i am adachi</h1>
       <p class="tagline">welcome to my little corner</p>
