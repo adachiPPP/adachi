@@ -13,6 +13,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+const bgs = ["./bg.jpg", "./bg2.jpg", "./bg3.jpg"];
+const randomBg = bgs[Math.floor(Math.random() * bgs.length)];
+document.documentElement.style.setProperty("--bg-img", `url("${randomBg}")`);
+</script>
 
 <header>
   <a href="#home" class="logo">
@@ -57,7 +62,7 @@
     <div class="card">
       <h3>kyon linux</h3>
       <p>an independent arch based distribution built with a custom package manager named nya designed for accessibility and clean aesthetics</p>
-      <p><a href="https://adachippp.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+      <p><a href="https://adachippp.github.io/kyonlinux" target="_blank" class="btn">heres the website :3</a></p>
     </div>
     <div class="card">
       <h3>smol linux</h3>
@@ -67,18 +72,18 @@
     <div class="card">
       <h3>cat clicker</h3>
       <p>a fun desktop clicker application written in rust using egui and packaged for arch linux</p>
-      <p><a href="https://github.com/adachiPPP/catclicker" target="_blank">get the src/appimages :3</a></p>
+      <p><a href="https://github.com/adachiPPP/catclicker" target="_blank" class="btn">get the src/appimages :3</a></p>
     </div>
     <div class="card">
       <h3>plainwire rust desktop client</h3>
       <p>a native desktop client for Plainwire, written in rust with (MY FAVORITE LANGUAGE I LOVE IT AAYAYYAAAHHHJBHJBHJBDVH) egui. and ts is not some weird ahhh tauri thing ITS A DAMN NATIVE APP.</p>
-      <p><a href="https://github.com/Plainwire-development/plainwire-desktop-rs" target="_blank">get the src :3</a></p>
+      <p><a href="https://github.com/Plainwire-development/plainwire-desktop-rs" target="_blank" class="btn">get the src :3</a></p>
     </div>
     <div class="card">
       <h3>boykisser (discord bot)</h3>
       <p>a fun to use discord bot that has rp features, moderation tools, built in ai assistant and code execution (currently python and lua)</p>
-      <p><a href="https://discord.com/oauth2/authorize?client_id=1357771345408299208&integration_type=1&scope=applications.commands" target="_blank">heres the user installation</a></p>
-      <p><a href="https://discord.com/oauth2/authorize?client_id=1357771345408299208&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank">heres the guild/server installation</a></p>
+      <p><a href="https://discord.com/oauth2/authorize?client_id=1357771345408299208&integration_type=1&scope=applications.commands" target="_blank" class="btn">heres the user installation</a></p>
+      <p><a href="https://discord.com/oauth2/authorize?client_id=1357771345408299208&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" class="btn">heres the guild/server installation</a></p>
     </div>
   </div>
 </section>
@@ -134,13 +139,13 @@
     <div class="card">
       <h3>kyon linux overview</h3>
       <p>kyon linux is an independent arch based custom distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
-      <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank">heres the website :3</a></p>
+      <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank" class="btn">heres the website :3</a></p>
     </div>
     <div class="card">
       <h3>nya package manager</h3>
       <p>nya package manager is here to completely replace yay and pacman from the root. pacman was never complete from my perspective, and needing an aur helper just to get packages from aur seemed pointless... so i just made my own! nya comes with a TON of features and its still lighter than pacman :3</p>
       <p>nya supports pacman repos, arch user repository, its own recipe thingy called nya-hosts, nix and last but not least flatpak. its job is to combine everything in one package manager and its pretty easy to use too!</p>
-      <p><a href="https://github.com/adachiPPP/nya" target="_blank">heres the github repo :3</a></p>
+      <p><a href="https://github.com/adachiPPP/nya" target="_blank" class="btn">heres the github repo :3</a></p>
     </div>
   </div>
 </section>
