@@ -138,7 +138,7 @@ document.documentElement.style.setProperty("--bg-img", `url("${randomBg}")`);
   <div class="grid">
     <div class="card">
       <h3>kyon linux overview</h3>
-      <p>kyon linux is an independent arch based custom distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
+      <p>kyon linux is an independent arch based distribution created with care featuring the custom nya package manager init options and a beautiful lightweight user experience check out the official repository and downloads to try it out</p>
       <p><a href="https://adachiPPP.github.io/kyonlinux" target="_blank" class="btn">heres the website :3</a></p>
     </div>
     <div class="card">
@@ -158,6 +158,19 @@ document.documentElement.style.setProperty("--bg-img", `url("${randomBg}")`);
     <a href="https://www.tiktok.com/@adachipotatochip" target="_blank">tiktok</a>
   </p>
 </footer>
+
+<script>
+function updateScrollBackground() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+  document.documentElement.style.setProperty("--scroll-progress", progress);
+}
+
+window.addEventListener("scroll", updateScrollBackground, { passive: true });
+window.addEventListener("resize", updateScrollBackground);
+updateScrollBackground();
+</script>
 
 </body>
 </html>
